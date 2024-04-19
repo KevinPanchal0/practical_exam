@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyCards extends StatelessWidget {
    final dynamic image1;
@@ -30,19 +31,19 @@ class MyCards extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title,style: const TextStyle(fontSize: 25),),
-                    Text('Smartphone | 2. Data Cable | \n3. Ejection Pin * Galaxy S24 Ultra does.',style: TextStyle(fontSize: 15,color: Colors.grey[700]),),
+                    Text(title,style: TextStyle(fontSize: 25.sp),),
+                    Text('Smartphone | 2. Data Cable | \n3. Ejection Pin * Galaxy S24 Ultra does.',style: TextStyle(fontSize: 12.sp,color: Colors.grey[700]),),
                   ],
                 ),
               ],
             ),
                 const SizedBox(height: 30,),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('\$ 1200',style: TextStyle(fontSize: 20),),
-                SizedBox(width: 30,),
-                Text('3.2(3000 Reviews)',style: TextStyle(fontSize: 20),),
+                Text('\$ 1200',style: TextStyle(fontSize: 20.sp),),
+                const SizedBox(width: 30,),
+                Text('3.2(3000 Reviews)',style: TextStyle(fontSize: 20.sp),),
               ],
             ),
             SizedBox(
@@ -52,8 +53,8 @@ class MyCards extends StatelessWidget {
                 itemCount: itemImages.length,
                 itemBuilder: (context, index) {
                   return SizedBox(
-                      width: 150,
-                      height: 200,
+                      width: 150.w,
+                      height: 200.w,
                       child: Image.asset(itemImages[index])
                   );
                 },
